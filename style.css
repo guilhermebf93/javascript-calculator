@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-white: #F0ECE5;
+    --darker-shade: #161A30;
+    --mid-shade: #31304D;
+    --light-shade: #B6BBC4;
+    --red: #9B4444;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-white);
+    font-family: "Ubuntu", sans-serif;
+}
+
+.title {
+    font-size: 2.4rem;
+    margin: 1rem auto 2rem;
+}
+
+#container {
+    border: 3px solid black;
+    border-radius: 7%;
+    min-width: 350px;
+    max-width: 500px;
+    width: 90%;
+    padding: 2rem;
+    background-color: var(--darker-shade);
+    margin-bottom: 4rem;
+    box-shadow: 5px 5px 10px black;
+}
+
+#screen {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    overflow: hidden;
+    font-size: 2.5em;
+    height: 5rem;
+    min-width: 100%;
+    padding: 0 1.5rem;                                   
+    background-color: var(--light-shade);
+    color: var(--darker-shade);
+    border: 2px solid black;
+    border-radius: 4%;
+    margin-bottom: 1rem;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+}
+
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 1rem 0;    
+}
+
+.button {
+    font-size: 2.4rem;
+    border: 2px solid var(--darker-shade);
+    border-radius: 10%;
+    height: 6rem;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.button:active {
+    transform: translateY(2px);
+}
+
+.btn-add {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    height: calc(12rem + 5px);
+}
+
+.btn-equals {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.signature {
+    position: relative;
+    bottom: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+}
